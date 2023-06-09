@@ -14,7 +14,7 @@ export class VideosPageComponent {
   videos: Video[] = []
   ngOnInit(): void {
       this.route.parent?.params.subscribe(({id}: any) => {
-        this.getVideosByMovie(12)
+        this.getVideosByMovie(id)
       })
   }
 
