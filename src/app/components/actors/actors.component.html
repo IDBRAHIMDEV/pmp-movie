@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4 mt-5" *ngFor="let actor of actors">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" [src]="resolveImage(actor.profile_path)" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title " >{{ actor.name}}</h5>
+                    <span class="badge bg-success rounded-pill"> {{actor.popularity | number: '1.0-0'}} </span>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
