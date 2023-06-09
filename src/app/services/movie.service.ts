@@ -9,7 +9,7 @@ import { switchMap } from 'rxjs/operators';
 export class MovieService {
 
   baseUrl: string = "https://api.themoviedb.org/3"
-  apiKey: string = "35cdda3651430d0dd4f856bd7df11a21"
+  apiKey: string = "229f6597d21a22dd691c3953ad23357c"
   
 
   constructor(private http: HttpClient) { }

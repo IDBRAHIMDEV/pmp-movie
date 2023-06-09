@@ -1,0 +1,32 @@
+
+
+
+
+<div class="container">
+
+  <h1>Similar Movies</h1>
+  
+  <div class="row">
+
+    <ng-container *ngFor="let item of similarMovies">
+
+      <div class="col-md-3">
+        <div class="card my-3" style="width:300px">
+          <img class="card-img-top" [src]="'https://image.tmdb.org/t/p/w300'+item.backdrop_path" alt="Card image cap">
+          <div class="card-body">
+            <p>{{item.title}}</p>
+            <p class="card-text">
+
+              {{item.overview}}
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </ng-container>
+
+  </div>
+
+</div>
+
+
