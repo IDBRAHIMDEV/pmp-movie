@@ -1,0 +1,18 @@
+<div class="card my-3">
+  <img
+    class="card-img-top"
+    [src]="'https://image.tmdb.org/t/p/w300' + item.poster_path"
+    [alt]="item.title"
+  />
+  <div class="card-body">
+    <h5 class="card-title">
+      {{ item.title | slice : 0 : 10 }}
+    </h5>
+    <p class="card-text">
+      {{ item.overview | slice : 0 : 50 }}
+    </p>
+    <a href="#" class="btn btn-success me-2"
+      ><i class="fa fa-info-circle"></i> More details</a
+    >
+  </div>
+</div>

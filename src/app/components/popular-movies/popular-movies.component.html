@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 my-5">
+      <h2>Popular movies</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2" *ngFor="let movie of popularMovies">
+      <app-card [item]="movie"></app-card>
+    </div>
+  </div>
+</div>
