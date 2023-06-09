@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { Response } from 'src/app/models/response';
+
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +11,7 @@ import { switchMap } from 'rxjs/operators';
 export class MovieService {
 
   baseUrl: string = "https://api.themoviedb.org/3"
-  apiKey: string = "35cdda3651430d0dd4f856bd7df11a21"
+  apiKey: string = "6cc23517a82af45bd0eaaf70a5e0374e"
   
 
   constructor(private http: HttpClient) { }
@@ -28,8 +30,8 @@ export class MovieService {
     return this.http.get(`${this.baseUrl}/movie/${id}/similar?api_key=${this.apiKey}`)
   }
 
-  getCreditsMovie(id: number) {
-    return this.http.get(`${this.baseUrl}/movie/${id}/credits?api_key=${this.apiKey}`)
+  getCreditsMovie(id: number) : Observable<Response> {
+    return this.http.get<Response>(`${this.baseUrl}/movie/${id}/credits?api_key=${this.apiKey}`)
   }
 
   getVideosMovie(id: number) {
