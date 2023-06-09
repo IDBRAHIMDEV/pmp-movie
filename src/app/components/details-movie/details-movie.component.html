@@ -1,0 +1,17 @@
+<div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
+  <h1>Movie Details</h1>
+  <div class="carousel-inner">
+    <div class="carousel-item" data-bs-interval="5000">
+      <img
+        [src]="'https://image.tmdb.org/t/p/original' + onemovie?.backdrop_path"
+        class="d-block w-100"
+        [alt]="onemovie?.original_title"
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>{{ onemovie?.original_title }}</h5>
+        <p>{{ onemovie?.overview }}</p>
+        <p>{{ onemovie?.popularity }}</p>
+      </div>
+    </div>
+  </div>
+</div>
